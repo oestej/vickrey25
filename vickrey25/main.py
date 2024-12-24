@@ -2,12 +2,12 @@ from vickrey25 import models
 
 
 # TODO:
-# - Define a water wheel process unit [produces kinetic energy from environmental condition: flowing water]
-# - Build the code to load/save to/from DynamoDB
+# - Build the code to load/save to/from MongoDB
+# - Instantiate a single process unit
 # - Build the code to run process units
 
 # TODO (Further)
-# - Environmental Conditions - Village (population)
+# - Environmental Conditions - Village (population), figure out labor requirements
 # - Environmental Conditions - Seasons
 # - Production Unit [grouping of process units]
 # - Wheat Farm [produces wheat from environmental condition, threshing process units, etc]
@@ -20,6 +20,7 @@ from vickrey25 import models
 
 def main():
     models.init()
+
     # All type definitions are cachable across entire run
     # All objects are cacheable within a single sequence step
 

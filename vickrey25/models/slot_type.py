@@ -15,9 +15,10 @@ class SlotTypeRegistry:
     def __init__(self):
         self.slot_types = {}
 
-    def load(self):
-        # TODO: Load slot types from database
-        pass
+    def load(self, data: list[dict]):
+        for item in data:
+            slot_type = SlotType(**item)
+            self.slot_types[slot_type.slot_type_id] = slot_type
 
     def get(self, slot_type_id: str) -> SlotType | None:
         return self.slot_types.get(slot_type_id, None)

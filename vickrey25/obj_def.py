@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 
-from vickrey25.type_def import ProcessUnitType, SlotType
+from vickrey25.models.process_unit_type import ProcessUnitType
+from vickrey25.models.slot_type import SlotType
 
 
 @dataclass

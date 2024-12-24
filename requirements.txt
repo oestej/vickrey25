@@ -1,0 +1,8 @@
+
+annotated-types==0.6.0  # pydantic dependency
+dnspython==2.6.1  # pymongo dependency
+orjson==3.10.7
+pydantic==2.10.4
+pydantic-core==2.27.2  # pydantic dependency
+pymongo==4.10.1
+typing-extensions==4.12.2  # pydantic dependency
