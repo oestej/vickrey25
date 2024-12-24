@@ -32,6 +32,8 @@ def main():
 
     # Storage Purge - should run after all process units are run
     # TODO: Check if a storage slot has is_storable set to False, if so, remove the goods from the storage slot
+    # TODO: Decrement perishable goods by decay_points
+    # TODO: If decay points are 0, remove the goods from the storage slot
 
 
 if __name__ == "__main__":
