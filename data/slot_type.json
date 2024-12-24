@@ -1,5 +1,9 @@
-{
-    "slot_type_id": "WlKfybsJjY4ITji6LdHT1",
-    "slot_type_name": "Storage Yard",
+[{
+    "slot_type_id": "-A0_M9XJd-YLvuvZQdtkX",
+    "slot_type_name": "Silo",
     "is_storable": true
-}
+}, {
+    "slot_type_id": "OgXUPoHIlG8xLXzxmk0t_",
+    "slot_type_name": "Machine Energy",
+    "is_storable": false
+}]

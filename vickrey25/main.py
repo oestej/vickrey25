@@ -1,66 +1,25 @@
-import nanoid
+from vickrey25 import models
 
-from obj_def import StorageSlot, ProcessUnit
-from type_def import ProcessUnitOption, ProcessUnitType, SolidResourceType, SlotType
+
+# TODO:
+# - Define a water wheel process unit [produces kinetic energy from environmental condition: flowing water]
+# - Build the code to load/save to/from DynamoDB
+# - Build the code to run process units
+
+# TODO (Further)
+# - Environmental Conditions - Village (population)
+# - Environmental Conditions - Seasons
+# - Production Unit [grouping of process units]
+# - Wheat Farm [produces wheat from environmental condition, threshing process units, etc]
+# - Logging [produces wood from environmental condition, sawmill milling process units, etc]
+# - Quarrying [produces stone from environmental condition, stone milling process units, etc]
+# - Build a production unit for each one of the above
+# - Crafting [job shop style]
+# - Specialist jobs [crafting, etc]
 
 
 def main():
-    bulk_storage_type = SlotType(slot_type_id=nanoid.generate(), slot_type_name="Bulk Storage", is_storable=True)
-    rye_grain = SolidResourceType(
-        resource_type_id=nanoid.generate(),
-        resource_type_name="Rye Grain",
-        unit_m3=0.001,
-        unit_kg=0.001,
-        allowed_slot_types=[bulk_storage_type],
-    )
-    wheat_grain = SolidResourceType(
-        resource_type_id=nanoid.generate(),
-        resource_type_name="Wheat Grain",
-        unit_m3=0.001,
-        unit_kg=0.001,
-        allowed_slot_types=[bulk_storage_type],
-    )
-    rye_flour = SolidResourceType(
-        resource_type_id=nanoid.generate(),
-        resource_type_name="Rye Flour",
-        unit_m3=0.001,
-        unit_kg=0.001,
-        allowed_slot_types=[bulk_storage_type],
-    )
-    wheat_flour = SolidResourceType(
-        resource_type_id=nanoid.generate(),
-        resource_type_name="Wheat Flour",
-        unit_m3=0.001,
-        unit_kg=0.001,
-        allowed_slot_types=[bulk_storage_type],
-    )
-    grain_mill = ProcessUnitType(
-        process_unit_type_id=nanoid.generate(),
-        process_unit_type_name="Grain Mill",
-        sequence_order=1,
-        process_options=[
-            ProcessUnitOption(inputs=[(rye_grain, 1)], outputs=[(rye_flour, 1)]),
-            ProcessUnitOption(inputs=[(wheat_grain, 1)], outputs=[(wheat_flour, 1)])
-        ]
-    )
-
-    input_storage = StorageSlot(
-        slot_type=bulk_storage_type,
-        capacity_m3=100,
-        capacity_kg=100,
-    )
-    output_storage = StorageSlot(
-        slot_type=bulk_storage_type,
-        capacity_m3=100,
-        capacity_kg=100,
-    )
-
-    grain_mill_process_unit = ProcessUnit(
-        type=grain_mill,
-        inputs=[input_storage],
-        outputs=[output_storage],
-    )
-
+    models.init()
     # All type definitions are cachable across entire run
     # All objects are cacheable within a single sequence step
 

@@ -1,0 +1,25 @@
+{
+    "process_unit_type_id": "kcy2x86-Qy9n9OosWvGIR",
+    "process_unit_type_name": "Stone Grain Mill",
+    "sequence_order": 2,
+    "process_options": [
+        {
+            "inputs": [
+                {
+                    "resource_type_id": "8YTuGA07tzZ1uwjEpmwKC",
+                    "quantity": 1
+                },
+                {
+                    "resource_type_id": "nC-vzUm1LSW6prUqSolrT",
+                    "quantity": 75
+                }
+            ],
+            "outputs": [
+                {
+                    "resource_type_id": "0ahDK2GsGg0DjB9Dwiubm",
+                    "quantity": 1
+                }
+            ]
+        }
+    ]
+}

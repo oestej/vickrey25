@@ -1,29 +1,6 @@
 from dataclasses import dataclass
 
-
-@dataclass
-class SlotType:
-    slot_type_id: str
-    slot_type_name: str
-    is_storable: bool
-
-
-@dataclass
-class ResourceType:
-    resource_type_id: str
-    resource_type_name: str
-    allowed_slot_types: list[SlotType]
-
-
-@dataclass
-class NonstorableResourceType(ResourceType):
-    pass
-
-
-@dataclass
-class SolidResourceType(ResourceType):
-    unit_m3: float
-    unit_kg: float
+from vickrey25.models.resource_type import ResourceType
 
 
 # Single Definition - Process Unit
@@ -34,8 +11,14 @@ class IOSlotType:
 
 
 @dataclass
+class EnvironmentSlotType:
+    # TODO: Defined Environmental Condition Slot Types
+    pass
+
+
+@dataclass
 class ProcessUnitOption:
-    inputs: list[IOSlotType]
+    inputs: list[IOSlotType | EnvironmentSlotType]
     outputs: list[IOSlotType]
 
 
@@ -46,3 +29,5 @@ class ProcessUnitType:
     sequence_order: int
     process_options: list[ProcessUnitOption]
 # End Single Definition
+
+# TODO WIP

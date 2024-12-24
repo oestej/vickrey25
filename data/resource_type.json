@@ -1,3 +1,24 @@
-{
-    
-}
+[{
+    "resource_type_id": "8YTuGA07tzZ1uwjEpmwKC",
+    "resource_type_name": "Wheat Berry",
+    "resource_class": "solid",
+    "unit_name": "unit",
+    "allowed_slot_types": [ "-A0_M9XJd-YLvuvZQdtkX"],
+    "unit_m3": 0.06503,
+    "unit_kg": 50
+}, {
+    "resource_type_id": "0ahDK2GsGg0DjB9Dwiubm",
+    "resource_type_name": "Whole Wheat Flour",
+    "resource_class": "solid_perishable",
+    "unit_name": "unit",
+    "allowed_slot_types": [ "-A0_M9XJd-YLvuvZQdtkX"],
+    "decay_points": 30,
+    "unit_m3": 0.0625,
+    "unit_kg": 37.5
+}, {
+    "resource_type_id": "nC-vzUm1LSW6prUqSolrT",
+    "resource_type_name": "Kinetic Energy",
+    "resource_class": "nonstorable",
+    "unit_name": "kJ",
+    "allowed_slot_types": ["OgXUPoHIlG8xLXzxmk0t_"]
+}]
